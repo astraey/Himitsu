@@ -1,0 +1,7 @@
+*.iml
+*.xml
+*.DS_Store
+*.pyc
+filtered-output.wav
+200hz_.wav
+.DS_Store

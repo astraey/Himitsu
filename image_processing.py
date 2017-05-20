@@ -8,9 +8,12 @@ width, height = im.size
 #print("Width: "+str(width))
 #print("Height: "+str(height))
 
+threshhold = 150
+
 for i in range(0,width):
     for j in range(0,height):
         red, green, blue = pix[i,j]
+        """
         if red > 100:
             pix[i,j] = (255, 255, 230)
         elif green > 100:
@@ -19,6 +22,12 @@ for i in range(0,width):
             pix[i,j] = (230,255,255)
         else:
             pix[i,j] = (77, 77, 77)
+        """
+        if red > threshhold or green > threshhold or blue > threshhold:
+            pix[i,j] = (255,255,255)
+
+        else:
+            pix[i,j] = (0,0,0)
 
 
 
